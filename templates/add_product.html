@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+    <style>
+        .center-align {
+            text-align: center; /* Center text and inline elements */
+            margin: 20px 0; /* Add some margin for spacing */
+        }
+        .flash-message {
+            color: red; /* Change this color as needed for error messages */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Add Product</h1>
+    </header>
+
+    <div class="center-align">
+        <button onclick="window.location.href='/'" class="btn home-btn">Home</button> <!-- Home Button -->
+    </div>
+
+    <form method="POST">
+        <label for="product_id">Product ID:</label>
+        <input type="text" name="product_id" required>
+    
+        <label for="location_id">Location:</label>
+        <select name="location_id" required>
+            <option value="">Select Location</option>
+            {% for location in locations %}
+                <option value="{{ location.location_id }}">{{ location.location_id }}</option>
+            {% endfor %}
+        </select>
+    
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" value="1" required>
+    
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>

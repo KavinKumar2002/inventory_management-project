@@ -1,0 +1,105 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif; /* Font family for text */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Remove default padding */
+    background-color: #f4f6f9; /* Light background color */
+    color: #333; /* Default text color */
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #253592, #3f51b5); /* Gradient background */
+    color: white;
+    padding: 30px 0; /* Increased padding for a more spacious look */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: 5px solid #7d8ef2; /* A colored border for separation */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Adjust font size for prominence */
+}
+
+header h4 {
+    margin-top: 10px; /* Space above subheading */
+}
+
+/* Home page content styling */
+.home-content {
+    max-width: 800px; /* Max width for home content */
+    margin: 20px auto; /* Center content with top margin */
+    padding: 20px; /* Padding for home content */
+    background-color: #7d8ef2; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #ffffff; /* Text color for content */
+}
+
+/* Navigation styling */
+nav {
+    background-color: #99a1d0; /* Background color for navigation */
+    padding: 20px; /* Padding for the entire nav container */
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 650px; /* Set a maximum width for the box */
+    margin: 20px auto; /* Center the navigation box */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav li {
+    margin: 10px 0; /* Space between each list item */
+}
+
+nav a {
+    display: block; /* Make the link fill the list item */
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Padding for each link */
+    border-radius: 4px; /* Rounded corners for links */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+nav a:hover {
+    background-color: #3f51b5; /* Background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 10px 0; /* Padding for footer */
+    background-color: #5c6bc0; /* Footer background color */
+    color: white; /* Footer text color */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Position at bottom */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0; /* Remove margin for footer text */
+}
+
+.home-btn {
+    background-color: #5c6bc0; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.home-btn:hover {
+    background-color: #5c6bc0; /* Darker green */
+}

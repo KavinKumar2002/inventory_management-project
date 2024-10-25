@@ -1,0 +1,180 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #253592, #3f51b5); /* Gradient background */
+    color: white;
+    padding: 30px 0; /* Increased padding for a more spacious look */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-bottom: 5px solid #7d8ef2; /* A colored border for separation */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Larger font size */
+    letter-spacing: 2px; /* Increase spacing between letters for a modern look */
+    text-transform: uppercase; /* Capitalize all letters for emphasis */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow to the text */
+}
+
+/* Form styling */
+form {
+    background: #7d8ef2; /* Set the form background color */
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Set a max width for the form */
+    margin-left: auto; /* Center the form horizontally */
+    margin-right: auto; /* Center the form horizontally */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make label bold */
+    color: white; /* Change label text color to white */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Set width to 100% for full-width input fields */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and borders in the element's total width */
+}
+
+/* Button styling */
+button {
+    background-color: #6174df;
+    color: white;
+    border: none;
+    margin:10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3f51b5;
+}
+
+/* Navigation links */
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav a {
+    background-color: #7d8ef2;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3f51b5;
+}
+
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; /* Space around the table */
+    font-family: Arial, sans-serif; /* Change the font for better readability */
+}
+
+/* Table Header Styles */
+th {
+    background-color: #3f51b5; /* Green background for header */
+    color: white; /* White text for header */
+    padding: 12px; /* Increased padding for header */
+    text-align: left;
+    font-weight: bold; /* Bold text */
+    border-bottom: 2px solid #ddd; /* Bottom border for header */
+}
+
+/* Table Cell Styles */
+td {
+    border: 1px solid #ddd; /* Border for cells */
+    padding: 10px; /* Increased padding for cells */
+    text-align: left;
+}
+
+/* Row Hover Effect */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+/* Alternate Row Backgrounds */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+/* Action Links Styles */
+td a {
+    color: #3e2395; /* Green color for action links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for better visibility */
+}
+
+td a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.home-btn {
+    background-color: #798ae8; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.home-btn:hover {
+    background-color: #5c6bc0; /* Darker green */
+}
+/* Specific button styles for Edit and Delete (grouped for identical styling) */
+.edit-btn, .delete-btn {
+    background-color: #6174df; /* Same color for both buttons */
+    color: white;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin: 5px; /* Add margin for spacing around the buttons */
+}
+
+/* Hover effect for both buttons */
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #3f51b5; /* Same hover effect for both buttons */
+}

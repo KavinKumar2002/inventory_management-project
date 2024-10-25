@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Balance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Product Balance Report</h1>
+        <h4>Overview of Product Quantities in Each Warehouse</h4>
+    </header>
+    
+    <!-- Table Section -->
+    {% if balance_data|length == 0 %}
+        <p>No products found.</p>
+    {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Warehouse</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Last Updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for warehouse, data in balance_data.items() %}
+                    {% for product_id, details in data.balances.items() %}
+                        <tr>
+                            <td>{{ product_id }}</td>  <!-- Display Product ID -->
+                            <td>{{ warehouse }}</td>    <!-- Display Warehouse -->
+                            <td>{{ details.quantity }}</td>  <!-- Display Quantity -->
+                            <td>{{ details.timestamp }}</td> <!-- Display Timestamp -->
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>            
+        </table>
+    {% endif %}
+    
+    <!-- Navigation Back to Home -->
+    <nav>
+        <a href="/home" class="button">Back to Home</a>
+    </nav>
+
+    <!-- Script to sort rows by Last Updated timestamp if necessary -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const table = document.querySelector("table tbody");
+            const rows = Array.from(table.querySelectorAll("tr"));
+            
+            // Sort rows based on the Last Updated timestamp in descending order
+            rows.sort((a, b) => {
+                const dateA = new Date(a.cells[3].textContent); // Timestamp cell
+                const dateB = new Date(b.cells[3].textContent);
+                return dateB - dateA; // Latest timestamp first
+            });
+            
+            // Append sorted rows to the table
+            rows.forEach(row => table.appendChild(row));
+        });
+    </script>
+</body>
+</html>
