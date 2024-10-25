@@ -23,7 +23,6 @@
                     <th scope="col">Product ID</th>
                     <th scope="col">Warehouse</th>
                     <th scope="col">Quantity</th>
-                    <th scope="col">Last Updated</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,7 +32,6 @@
                             <td>{{ product_id }}</td>  <!-- Display Product ID -->
                             <td>{{ warehouse }}</td>    <!-- Display Warehouse -->
                             <td>{{ details.quantity }}</td>  <!-- Display Quantity -->
-                            <td>{{ details.timestamp }}</td> <!-- Display Timestamp -->
                         </tr>
                     {% endfor %}
                 {% endfor %}
